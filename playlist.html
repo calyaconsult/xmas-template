@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+  <title>Festliche Klänge</title>
+  <!-- Bootstrap core CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <!-- local stylesheet -->
+  <link href="css/localstyle.css" rel="stylesheet">
+  <!-- page-specific styles -->
+  <link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+  <link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&amp;family=Playfair+Display%3Awght%40700&amp;family=Spline+Sans%3Awght%40400%3B500%3B700" onload="this.rel='stylesheet'" rel="stylesheet"/>
+  <style>
+    :root {
+      --rich-gold: #D4AF37;
+      --light-blue-bg: #ADD8E6;
+      --dark-blue-bg: #011627;
+      --blue-border: #023e54;
+    }
+    body {
+      background-color: var(--dark-blue-bg);
+      color: white;
+      font-family: "Spline Sans", "Noto Sans", sans-serif;
+    }
+    .font-serif-display {
+      font-family: 'Georgia', serif;
+    }
+    .navbar {
+      border-bottom: 1px solid var(--blue-border);
+    }
+    .nav-link, .navbar-brand {
+      color: white !important;
+    }
+    .nav-link:hover, .navbar-brand:hover {
+      color: var(--rich-gold) !important;
+    }
+    .playlist-item {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 0.5rem 1rem;
+      min-height: 72px;
+    }
+    .playlist-item__icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 0.5rem;
+      background-color: var(--blue-border);
+      color: var(--rich-gold);
+      flex-shrink: 0;
+      width: 48px;
+      height: 48px;
+    }
+    .playlist-item__details {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .playlist-item__title {
+      font-size: 1rem;
+      font-weight: 500;
+      line-height: 1.5;
+      color: white;
+    }
+    .playlist-item__description {
+      font-size: 0.875rem;
+      font-weight: 400;
+      line-height: 1.5;
+      color: var(--light-blue-bg);
+    }
+    /* ensure content isn't hidden behind fixed navbar */
+    main {
+      padding-top: 4.5rem;
+    }
+
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top" style="background-color: var(--dark-blue-bg);">
+    <a class="navbar-brand" href="index.html">
+      <img alt="Logo" src="https://via.placeholder.com/40x40.png?text=Logo" width="40" height="40" loading="lazy" decoding="async">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Navigation umschalten">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html"><span class="symbol-b">»</span> Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="ideen-2025.html"><span class="symbol-b">»</span> Ideen</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="seitenskelett.html"><span class="symbol-b">»</span> Seitenskelett</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="playlist.html" aria-current="page"><span class="symbol-b">»</span> Playlist</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="planung.html"><span class="symbol-b">»</span> Planung</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="seo-planung.html"><span class="symbol-b">»</span> SEO-Planung</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="tasklist.html"><span class="symbol-b">»</span> Tasklist</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="terminkalender.html"><span class="symbol-b">»</span> Termine</a>
+        </li>
+      </ul>
+      <div class="flex items-center gap-2">
+        <button class="group flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-10 bg-[var(--blue-border)] text-white hover:text-[var(--rich-gold)] gap-2 text-sm font-bold leading-normal tracking-[0.015em] min-w-0 px-2.5">
+          <div class="text-white group-hover:text-[var(--rich-gold)]" data-icon="Heart" data-size="20px" data-weight="regular">
+            <svg fill="currentColor" height="20px" viewBox="0 0 256 256" width="20px" xmlns="http://www.w3.org/2000/svg">
+              <path d="M178,32c-20.65,0-38.73,8.88-50,23.89C116.73,40.88,98.65,32,78,32A62.07,62.07,0,0,0,16,94c0,70,103.79,126.66,108.21,129a8,8,0,0,0,7.58,0C136.21,220.66,240,164,240,94A62.07,62.07,0,0,0,178,32ZM128,206.8C109.74,196.16,32,147.69,32,94A46.06,46.06,0,0,1,78,48c19.45,0,35.78,10.36,42.6,27a8,8,0,0,0,14.8,0c6.82-16.67,23.15-27,42.6-27a46.06,46.06,0,0,1,46,46C224,147.61,146.24,196.15,128,206.8Z"></path>
+            </svg>
+          </div>
+        </button>
+        <button class="group flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-10 bg-[var(--blue-border)] text-white hover:text-[var(--rich-gold)] gap-2 text-sm font-bold leading-normal tracking-[0.015em] min-w-0 px-2.5">
+          <div class="text-white group-hover:text-[var(--rich-gold)]" data-icon="User" data-size="20px" data-weight="regular">
+            <svg fill="currentColor" height="20px" viewBox="0 0 256 256" width="20px" xmlns="http://www.w3.org/2000/svg">
+              <path d="M230.92,212c-15.23-26.33-38.7-45.21-66.09-54.16a72,72,0,1,0-73.66,0C63.78,166.78,40.31,185.66,25.08,212a8,8,0,1,0,13.85,8c18.84-32.56,52.14-52,89.07-52s70.23,19.44,89.07,52a8,8,0,1,0,13.85-8ZM72,96a56,56,0,1,1,56,56A56.06,56.06,0,0,1,72,96Z"></path>
+            </svg>
+          </div>
+        </button>
+        <div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" style='background-image: url("https://via.placeholder.com/40x40.png?text=User"); width: 40px; height: 40px;'></div>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <div class="container">
+      <div class="layout-content-container" style="max-width: 960px; margin: auto;">
+        <div class="w-full bg-center bg-no-repeat bg-cover flex flex-col justify-end overflow-hidden" style='min-height: 218px; background-image: url("https://via.placeholder.com/960x218.png?text=Festliche+Kl%C3%A4nge"); border-radius: 0.75rem; margin-top: 1.25rem;'></div>
+        <div class="flex flex-wrap justify-between gap-3 p-4">
+          <div class="flex min-w-72 flex-col gap-3">
+            <p class="font-serif-display tracking-light" style="font-size: 32px; font-weight: bold; color: var(--rich-gold);">Weihnachtsklassiker</p>
+            <p class="text-sm font-normal leading-normal" style="color: var(--light-blue-bg);">Eine Sammlung zeitloser Weihnachtslieder, die Freude und Fröhlichkeit in Ihre Weihnachtszeit bringen.</p>
+          </div>
+        </div>
+        <div id="playlist-container">
+          <!-- Playlist items will be injected here by JavaScript -->
+        </div>
+      </div>
+   </main>
+
+  <footer class="py-4">
+    <div class="container">
+      <div class="section-top-border">
+        <p class="big">»» Weitere Dienste<br></p>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="single-defination">
+              <h5 class="mb-20">Service 1</h5>
+              <p>Unser exklusiver Service für anspruchsvolle Kunden</p>
+              <p><a class="btn btn-secondary" href="#">Mehr dazu »</a></p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="single-defination">
+              <h5 class="mb-20">Service 2</h5>
+              <p>Für Einsteiger: preisgünstig, aber trotzdem von hoher Qualität.</p>
+              <p><a class="btn btn-secondary" href="#">Mehr dazu »</a></p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="single-defination">
+              <h5 class="mb-20">Rufen Sie uns an oder<br>kontaktieren Sie uns per Mail</h5>
+              <p>
+                Telefon: <a href="tel:+41800660660">+41 800 66 06 60</a><br>
+                E-Mail: <a href="mailto:info@example.com">info@example.com</a><br>
+                Twitter: <a href="#">@TwitterHandle</a>
+              </p>
+              <p><a href="#">Datenschutzerklärung</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script crossorigin="anonymous" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script>
+    const playlistData = [
+      { title: "Stille Nacht", description: "Ein klassisches Weihnachtslied über die Geburt Jesu." },
+      { title: "Jingle Bells", description: "Ein fröhliches Lied über die Reise des Weihnachtsmanns." },
+      { title: "Weiße Weihnacht", description: "Ein herzerwärmendes Lied über den Wunsch nach einer weißen Weihnacht." },
+      { title: "Deck the Halls", description: "Ein festliches Lied über das Schmücken zu Weihnachten." },
+      { title: "Joy to the World", description: "Ein fröhliches Lied über die Ankunft von Weihnachten." },
+      { title: "Wir drei Könige", description: "Ein klassisches Weihnachtslied über die heiligen drei Könige." },
+      { title: "O Holy Night", description: "Ein traditionelles Weihnachtslied über die Geburt Jesu." },
+      { title: "Der Tanz der Elfen", description: "Ein lustiges Lied über die Helfer des Weihnachtsmanns." },
+      { title: "Stern des Wunders", description: "Ein wunderschönes Lied über den Stern von Bethlehem." },
+      { title: "Weihnachtsjubel", description: "Ein lebhaftes Lied über den Geist von Weihnachten." }
+    ];
+
+    function renderPlaylistItem(item) {
+      const container = document.createElement('div');
+      container.className = 'playlist-item';
+
+      const icon = document.createElement('div');
+      icon.className = 'playlist-item__icon';
+      icon.innerHTML = `
+        <svg fill="currentColor" height="24px" viewBox="0 0 256 256" width="24px" xmlns="http://www.w3.org/2000/svg">
+          <path d="M210.3,56.34l-80-24A8,8,0,0,0,120,40V148.26A48,48,0,1,0,136,184V98.75l69.7,20.91A8,8,0,0,0,216,112V64A8,8,0,0,0,210.3,56.34ZM88,216a32,32,0,1,1,32-32A32,32,0,0,1,88,216ZM200,101.25l-64-19.2V50.75L200,70Z"></path>
+        </svg>
+      `;
+
+      const details = document.createElement('div');
+      details.className = 'playlist-item__details';
+
+      const title = document.createElement('p');
+      title.className = 'playlist-item__title';
+      title.textContent = item.title;
+
+      const description = document.createElement('p');
+      description.className = 'playlist-item__description';
+      description.textContent = item.description;
+
+      details.appendChild(title);
+      details.appendChild(description);
+      container.appendChild(icon);
+      container.appendChild(details);
+
+      return container;
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      const playlistContainer = document.getElementById('playlist-container');
+      playlistData.forEach(item => {
+        playlistContainer.appendChild(renderPlaylistItem(item));
+      });
+    });
+  </script>
+</body>
+</html>
